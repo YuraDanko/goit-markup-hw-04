@@ -79,21 +79,38 @@ img {
 .nav-link:hover,
 .nav-link:focus {
     color: #404bbf;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.address-list {
-    display: flex;
-    gap: 40px;
+.current{
+   position: relative;
+   color:  #404bbf;
+}
+.current::after{
+    content: "";
+    position: absolute;
+    border-radius: 2px;
+    width: 100%;
+    height: 4px;
+    background: #404bbf;
+    left: 0;
+    bottom: -1px;
 }
 .address {
     font-style: normal;
     margin-left: auto;
 }
+.address-list {
+    display: flex;
+    gap: 40px;
+}
+
 .adres-link {
     font-weight: 400;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #434455;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .adres-link:hover,
 .adres-link:focus {
@@ -108,6 +125,9 @@ img {
     margin-right: auto;
     padding-top: 188px;
     padding-bottom: 188px;
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7),rgba(46, 47, 66, 0.7)),
+    url(../images/people-office\ 1.jpg);
+    background-size: cover;
 }
 .hero-text {
     font-weight: 700;
@@ -167,6 +187,17 @@ img {
 .benefits-list-item {
     width: 264px;
 }
+.ben-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 112px;
+    background-color: #f4f4fd;
+    border: 1px solid #8e8f99;
+    border-radius: 4px;
+    min-width: 264px;
+    margin-bottom: 8px;
+}
 .benefits-title {
     font-weight: 500;
     font-size: 20px;
@@ -224,7 +255,32 @@ img {
     color: #434455;
     text-align: center
 }
-
+.soc-link{
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+}
+.soc-item{
+    width: 40px;
+    height: 40px;
+}
+.link-soc {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: #4d5ae5;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    transition:  250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.link-soc:hover
+.link-soc:focus{
+    background-color: #404BBF;
+}
+.soc-icons {
+    fill: #f4f4fd;
+}
 /* OUR PORTFOLIO */
 .portfolio {
     font-weight: 700;
